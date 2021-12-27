@@ -8,7 +8,7 @@
 
 <body>
   <script src='https://unpkg.com/vue@2.2.6'></script>
-  <script src="./v-jsoneditor.min.js"></script>
+  <script src="../dist/v-jsoneditor.min.js"></script>
   <div id="app">
     <template>
         <v-jsoneditor ref="editor" v-model="json" :options="options" @error="onError"></v-jsoneditor>
@@ -28,7 +28,7 @@
       name: 'test',
       data() {
         return {
-          json: {"hello": "vue"},
+          json: {"hello": "vue", "class": {"num": 1, "name": "54m55pav5ouJTW9kZWxZ"}},
           options: {
             onChange: (e) => {
               console.log(e)
@@ -46,7 +46,7 @@
 
               return errors;
             },
-            mode: 'code'
+            mode: 'tree'
           }
         }
       },
